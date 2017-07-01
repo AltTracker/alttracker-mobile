@@ -81,12 +81,14 @@ class Flex extends Component {
   }
 
   render () {
-    const { w, h, dir, wrap, justGroups, self, c, just, align } = this.props
+    const { w, h, dir, wrap, justGroups, self, c, just, align, style, className } = this.props
 
     return (
       <StyledFlex
         h={h}
         w={w}
+        style={style}
+        className={className}
         flexDirection={pathOr(flexDirection, dir)}
         flexWrap={pathOr(flexWrap, wrap)}
         justifyContent={pathOr(justifyContent, just)}

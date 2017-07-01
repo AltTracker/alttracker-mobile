@@ -1,23 +1,40 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React, { Component } from 'react'
+import Main from './components/Main'
+import {
+  View
+} from 'react-native'
+import {
+  setCustomText
+} from 'react-native-global-props'
 
-export default class App extends React.Component {
-  render () {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    )
+export default () => {
+  setCustomText({
+    style: {
+      fontSize: 18
+    }
+  })
+
+  class App extends Component {
+    state = {
+      loaded: false
+    }
+
+    async componentWillMount () {
+      await Expo.Font.loadAsync({
+        'Roboto': require('native-base/Fonts/Roboto.ttf'),
+        'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf')
+      })
+      this.setState({ loaded: true })
+    }
+
+    render () {
+      if (!this.state.loaded) {
+        return <View />
+      } else {
+        return <Main />
+      }
+    }
   }
+
+  return <App />
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-})

@@ -30,7 +30,8 @@ export default class Portfolio extends Component {
   render () {
     return (
       <View style={{ alignItems: 'center', justifyContent: 'center' }}>
-        <View style={{ width: '95%' }}>
+        <View style={{ marginTop: 4, width: '95%' }}>
+          <PortfolioValue />
           <ListView
             dataSource={this.state.trades}
             renderSectionHeader={PortfolioHeader}

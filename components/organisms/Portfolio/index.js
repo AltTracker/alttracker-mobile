@@ -4,13 +4,14 @@
 
 import React, { Component } from 'react'
 import Flex from 'Flex'
-import PortfolioPosition from 'PortfolioPosition'
+import PortfolioValue from 'PortfolioValue'
+import PortfolioPosition, { PortfolioHeader } from 'PortfolioPosition'
 import {
-  Text,
   Image,
   ListView,
   View
 } from 'react-native'
+import { Text } from 'native-base'
 
 export default class Portfolio extends Component {
   constructor () {
@@ -32,6 +33,7 @@ export default class Portfolio extends Component {
         <View style={{ width: '95%' }}>
           <ListView
             dataSource={this.state.trades}
+            renderSectionHeader={PortfolioHeader}
             renderRow={PortfolioPosition}
           />
         </View>

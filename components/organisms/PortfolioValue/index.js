@@ -17,8 +17,8 @@ export default class PortfolioValue extends Component {
   render () {
     return (
       <Container dir='ttb' just='c' align='c' w='100%'>
-        <Label>Your portfolio</Label>
-        <TextMain>$4,000</TextMain>
+        <Label alt>Your portfolio</Label>
+        <TextMain alt>$4,000</TextMain>
         <GainValue>+$965.00</GainValue>
       </Container>
     )

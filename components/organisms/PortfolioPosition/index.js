@@ -21,7 +21,7 @@ const style = {
 }
 
 export const PortfolioHeader = () => (
-  <Row>
+  <Row alt>
     <Cell firstCell>
     </Cell>
     <Cell full>

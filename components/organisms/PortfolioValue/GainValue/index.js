@@ -1,7 +1,7 @@
 import styled from 'styled-components/native'
 
 export default styled.Text`
-  color: green;
+  color: lightgreen;
   margin-top: 2px;
   text-align: right;
 `

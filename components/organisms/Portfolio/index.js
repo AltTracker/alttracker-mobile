@@ -11,6 +11,7 @@ import {
   ListView,
   View
 } from 'react-native'
+import Container from './Container'
 import { Text } from 'native-base'
 import theme from 'theme'
 
@@ -30,14 +31,21 @@ export default class Portfolio extends Component {
 
   render () {
     return (
-      <View style={{ alignItems: 'center', justifyContent: 'center' }}>
-        <View style={{ marginTop: 4, width: '95%' }}>
+      <View>
+        <Container
+          h='180px'
+          align='e'
+        >
           <PortfolioValue />
-          <ListView
-            dataSource={this.state.trades}
-            renderSectionHeader={PortfolioHeader}
-            renderRow={PortfolioPosition}
-          />
+        </Container>
+        <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+          <Flex h='100%' w='100%'>
+            <ListView
+              dataSource={this.state.trades}
+              renderSectionHeader={PortfolioHeader}
+              renderRow={PortfolioPosition}
+            />
+          </Flex>
         </View>
       </View>
     )

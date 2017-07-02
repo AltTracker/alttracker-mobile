@@ -6,11 +6,13 @@ import {
 import {
   setCustomText
 } from 'react-native-global-props'
+import theme from 'theme'
 
 export default () => {
   setCustomText({
     style: {
-      fontSize: 18
+      fontSize: 18,
+      color: theme.palette.text
     }
   })
 

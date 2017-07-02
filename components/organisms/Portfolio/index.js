@@ -12,6 +12,7 @@ import {
   View
 } from 'react-native'
 import { Text } from 'native-base'
+import theme from 'theme'
 
 export default class Portfolio extends Component {
   constructor () {

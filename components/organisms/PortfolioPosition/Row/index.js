@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components/native'
 
 export default styled.View`
-  background-color: white;
+  background-color: ${props => props.theme.palette.canvas};
   border-color: lightgray;
   border-style: solid;
   border-width: 0px;

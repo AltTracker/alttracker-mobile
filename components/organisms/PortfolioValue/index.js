@@ -3,6 +3,7 @@
  **/
 
 import React, { Component } from 'react'
+import Container from './Container'
 import Flex from 'Flex'
 import {
   Text,
@@ -15,16 +16,11 @@ import GainValue from './GainValue'
 export default class PortfolioValue extends Component {
   render () {
     return (
-      <Flex dir='ltr' just='b'>
-        <View>
-          <Label>Your portfolio</Label>
-          <TextMain>$4,000</TextMain>
-        </View>
-        <View>
-          <Label>Total Gain/Loss</Label>
-          <GainValue>+$965.00</GainValue>
-        </View>
-      </Flex>
+      <Container dir='ttb' just='c' align='c' w='100%'>
+        <Label>Your portfolio</Label>
+        <TextMain>$4,000</TextMain>
+        <GainValue>+$965.00</GainValue>
+      </Container>
     )
   }
 }

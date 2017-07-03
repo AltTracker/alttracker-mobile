@@ -63,13 +63,6 @@
     component-type "^1.2.1"
     join-component "^1.1.0"
 
-"@shoutem/animation@^0.8.9":
-  version "0.8.10"
-  resolved "https://registry.yarnpkg.com/@shoutem/animation/-/animation-0.8.10.tgz#2246709c88ab8c39c3e7ab7f4c212268fb63e52e"
-  dependencies:
-    hoist-non-react-statics "^1.2.0"
-    lodash "^4.15.0"
-
 Base64@~0.1.3:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/Base64/-/Base64-0.1.4.tgz#e9f6c6bef567fd635ea4162ab14dd329e74aa6de"
@@ -4241,33 +4234,6 @@ mz@^2.6.0:
 nan@^2.3.3:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.6.2.tgz#e4ff34e6c95fdfb5aecc08de6596f43605a7db45"
-
-native-base-shoutem-theme@0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/native-base-shoutem-theme/-/native-base-shoutem-theme-0.1.7.tgz#9771633afd66021e24402beadbbbf66ae56895c7"
-  dependencies:
-    hoist-non-react-statics "^1.0.5"
-    lodash "^4.10.1"
-    prop-types "^15.5.10"
-
-native-base@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/native-base/-/native-base-2.2.0.tgz#63d1aadd72c3ef737076f0be9d9c2ff64608c609"
-  dependencies:
-    "@shoutem/animation" "^0.8.9"
-    blueimp-md5 "^2.5.0"
-    clamp "^1.0.1"
-    color "~1.0.3"
-    fs-extra "^2.0.0"
-    lodash "~4.11.1"
-    native-base-shoutem-theme "0.1.7"
-    print-message "^2.1.0"
-    react-native-drawer "^2.3.0"
-    react-native-easy-grid "0.1.7"
-    react-native-keyboard-aware-scroll-view "0.2.9"
-    react-native-vector-icons "~4.1.1"
-    react-tween-state "^0.1.5"
-    tween-functions "^1.0.1"
 
 natural-compare@^1.4.0:
   version "1.4.0"

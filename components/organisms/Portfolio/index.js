@@ -9,10 +9,10 @@ import PortfolioPosition, { PortfolioHeader } from 'PortfolioPosition'
 import {
   Image,
   ListView,
+  Text,
   View
 } from 'react-native'
 import Container from './Container'
-import { Text } from 'native-base'
 import theme from 'theme'
 
 export default class Portfolio extends Component {

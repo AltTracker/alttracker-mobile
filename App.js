@@ -4,11 +4,19 @@ import {
   View
 } from 'react-native'
 import {
-  setCustomText
+  setCustomText,
+  setCustomTextInput
 } from 'react-native-global-props'
 import theme from 'theme'
 
 export default () => {
+  setCustomTextInput({
+    style: {
+      fontSize: 18,
+      height: 40
+    }
+  })
+
   setCustomText({
     style: {
       fontSize: 18,
@@ -22,10 +30,6 @@ export default () => {
     }
 
     async componentWillMount () {
-      await Expo.Font.loadAsync({
-        'Roboto': require('native-base/Fonts/Roboto.ttf'),
-        'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf')
-      })
       this.setState({ loaded: true })
     }
 

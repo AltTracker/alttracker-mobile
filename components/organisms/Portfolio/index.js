@@ -3,6 +3,7 @@
  **/
 
 import React, { Component } from 'react'
+import { NavigationActions } from 'react-navigation'
 import Flex from 'Flex'
 import PortfolioValue from 'PortfolioValue'
 import PortfolioPosition, { PortfolioHeader } from 'PortfolioPosition'
@@ -12,10 +13,12 @@ import {
   Text,
   View
 } from 'react-native'
+import Button from 'CAButton'
 import Container from './Container'
 import theme from 'theme'
 
 export default class Portfolio extends Component {
+
   constructor () {
     super()
 
@@ -29,6 +32,12 @@ export default class Portfolio extends Component {
     }
   }
 
+  onAddTrade = () => {
+    const action = NavigationActions.navigate({ routeName: 'PortfolioAddTrade' })
+
+    this.props.navigation.dispatch(action)
+  }
+
   render () {
     return (
       <View>
@@ -38,6 +47,7 @@ export default class Portfolio extends Component {
         >
           <PortfolioValue />
         </Container>
+        <Button onPress={this.onAddTrade} title='Add' />
         <View style={{ alignItems: 'center', justifyContent: 'center' }}>
           <Flex h='100%' w='100%'>
             <ListView

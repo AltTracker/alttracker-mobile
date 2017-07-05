@@ -3,10 +3,12 @@
  **/
 
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
-import FormItem from 'FormItem'
-import FormLabel from 'FormLabel'
-import FormInput from 'FormInput'
+import { Pages } from 'react-native-pages'
+
+import CurrencyPage from './CurrencyPage'
+import AmountObtainedPage from './AmountObtainedPage'
+import CostPage from './CostPage'
+import theme from '../../theme'
 
 export default class PortfolioAddTrade extends Component {
   state = {
@@ -18,20 +20,14 @@ export default class PortfolioAddTrade extends Component {
   }
 
   render () {
-    const { onChangeNumber } = this
-    const { number } = this.state
+    const style = { backgroundColor: theme.palette.primary }
 
     return (
-      <View>
-        <FormItem
-          label={<FormLabel>Currency</FormLabel>}
-          input={<FormInput />}
-        />
-        <FormItem
-          label={<FormLabel>Amount</FormLabel>}
-          input={<FormInput type='number' value={number} onChange={onChangeNumber} />}
-        />
-      </View>
+      <Pages style={style}>
+        <CurrencyPage />
+        <AmountObtainedPage />
+        <CostPage />
+      </Pages>
     )
   }
 }

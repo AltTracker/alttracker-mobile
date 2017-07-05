@@ -47,7 +47,7 @@ class FormInput extends Component {
   render () {
     const { onFocus, onBlur, onChangeText } = this
     const { focused } = this.state
-    const { children, theme, type, onChange: omitA, onChangeText: omitB, ...props } = this.props
+    const { children, theme, type, selectionColor, onChange: omitA, onChangeText: omitB, ...props } = this.props
 
     return (
       <Styled
@@ -56,7 +56,7 @@ class FormInput extends Component {
         focused={focused}
         onFocus={onFocus}
         onBlur={onBlur}
-        selectionColor={theme.palette.primary}
+        selectionColor={selectionColor ? selectionColor : theme.palette.primary}
         onChangeText={onChangeText}
         {...props}
       >

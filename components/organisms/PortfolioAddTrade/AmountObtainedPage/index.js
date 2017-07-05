@@ -4,7 +4,7 @@ import PageContainer from '../PageContainer'
 import FormLabel from '../Label'
 import FormInput from '../Input'
 
-export default ({ children, progress, ...props }) => {
+export default ({ children, progress, onSubmit, ...props }) => {
   const style = {
     transform: [{
       translateY: progress.interpolate({

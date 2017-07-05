@@ -4,11 +4,16 @@ import GridView from 'react-native-super-grid'
 import Item from '../Item'
 
 export default class List extends Component {
-  constructor (props) {
-    super()
+  static defaultProps = {
+    onSubmit: _ => {}
+  }
+
+  onSelectItem = props => {
+    this.props.onSubmit(props)
   }
 
   render () {
+    const { renderItem } = this
     const { data } = this.props
 
     return (
@@ -16,8 +21,14 @@ export default class List extends Component {
         enableEmptySections
         itemWidth={90}
         items={Object.keys(data).map(k => data[k])}
-        renderItem={Item}
+        renderItem={renderItem}
       />
+    )
+  }
+
+  renderItem = ({ children, ...props }) => {
+    return (
+      <Item onPress={_ => this.props.onSubmit(props)} {...props}>{children}</Item>
     )
   }
 }

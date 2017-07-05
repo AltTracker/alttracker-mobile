@@ -39,7 +39,7 @@ class CurrencyPage extends Component {
 
   render () {
     const { getRelevantCurrencies } = this
-    const { children, progress, ...props } = this.props
+    const { children, progress, onSubmit, ...props } = this.props
 
     const style = {
       transform: [{
@@ -57,6 +57,7 @@ class CurrencyPage extends Component {
           input={<FormInput onChange={this.onChange} noMarginBottom />}
         />
         <List
+          onSubmit={onSubmit}
           data={getRelevantCurrencies()}
         />
       </PageContainer>

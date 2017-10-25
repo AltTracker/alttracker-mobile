@@ -8,6 +8,7 @@ import dismissKeyboard from 'dismissKeyboard'
 
 import CurrencyPage from './CurrencyPage'
 import AmountObtainedPage from './AmountObtainedPage'
+import DatePage from './DatePage'
 import CostPage from './CostPage'
 import theme from '../../theme'
 
@@ -45,6 +46,7 @@ export default class PortfolioAddTrade extends Component {
         <CurrencyPage onSubmit={toAmountPage} />
         <AmountObtainedPage onSubmit={toCostPage} />
         <CostPage />
+        <DatePage />
       </Pages>
     )
   }

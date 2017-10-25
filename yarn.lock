@@ -4781,9 +4781,9 @@ react-native-modal@3.1.0:
     prop-types "15.5.10"
     react-native-animatable "^1.2.3"
 
-react-native-pages@^0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/react-native-pages/-/react-native-pages-0.5.2.tgz#315b36d87c0f2f9e68a9239d5aa61b682e5613ee"
+react-native-pages@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/react-native-pages/-/react-native-pages-0.6.0.tgz#73f7a3ebfc7f2126cb606326c5285fcdb9e42095"
   dependencies:
     prop-types "^15.5.9"
 
